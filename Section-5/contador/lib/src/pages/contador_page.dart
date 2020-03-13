@@ -15,6 +15,7 @@ class _ContadorPageState extends State {
     return Scaffold(
       appBar: AppBar(
         title: Text('Bienvenido $_conteo'),
+        backgroundColor: const Color.fromRGBO(244, 128, 50, 1.0),
         centerTitle: true,
       ),
       body: Center(
@@ -31,8 +32,20 @@ class _ContadorPageState extends State {
           ),
         ],
       )),
-      floatingActionButton: _crearBotones(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      bottomNavigationBar: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
+        color: const Color.fromRGBO(64, 64, 64, 1.0),
+        child: Container(
+          height: 50.0,
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromRGBO(244, 128, 50, 1.0),
+        child: Icon(Icons.add),
+        onPressed: _agregar,
+      ),
+      //floatingActionButton: _crearBotones(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 

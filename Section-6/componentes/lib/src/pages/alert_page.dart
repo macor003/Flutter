@@ -8,13 +8,34 @@ class AlertPage extends StatelessWidget {
         title: Text('Alerta'),
         backgroundColor: Colors.orange,
       ),
+      body: Center(
+        child: RaisedButton(
+            child: Text('Mostrar Alerta'),
+            color: Colors.orange,
+            textColor: Colors.white,
+            shape: StadiumBorder(),
+            onPressed: () => _mostrarAlerta(context)),
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.arrow_back),
         backgroundColor: Colors.orange,
-        onPressed: (){
+        onPressed: () {
           Navigator.pop(context);
         },
       ),
+    );
+  }
+
+  void _mostrarAlerta(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (context){
+        return AlertDialog(
+          title: Text('Titulo'),
+          content: Text('Contenido'),          
+        );
+      }
     );
   }
 }

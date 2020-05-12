@@ -9,13 +9,32 @@ class CardPage extends StatelessWidget {
         backgroundColor: Colors.orange,
       ),
       body: ListView(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(5.0),
         children: <Widget>[
           _cardTipo1(),
           SizedBox(
-            height: 30.0,
+            height: 10.0,
           ),
-          _cardTipo2()
+          _cardTipo2(),
+          SizedBox(
+            height: 10.0,
+          ),
+          _cardTipo1(),
+          SizedBox(
+            height: 10.0,
+          ),
+          _cardTipo2(),
+          SizedBox(
+            height: 10.0,
+          ),
+          _cardTipo1(),
+          SizedBox(
+            height: 10.0,
+          ),
+          _cardTipo2(),
+          SizedBox(
+            height: 10.0,
+          )
         ],
       ),
     );
@@ -23,7 +42,7 @@ class CardPage extends StatelessWidget {
 
   Widget _cardTipo1() {
     return Card(
-      elevation: 5.0,
+      elevation: 10.0,      
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         children: <Widget>[
@@ -50,7 +69,9 @@ class CardPage extends StatelessWidget {
 
   Widget _cardTipo2() {
     return Card(
-      elevation: 5.0,
+      clipBehavior: Clip.antiAlias,
+      elevation: 10.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       child: Column(
         children: <Widget>[
           FadeInImage(

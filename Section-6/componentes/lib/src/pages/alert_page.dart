@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AlertPage extends StatelessWidget {
@@ -28,14 +29,33 @@ class AlertPage extends StatelessWidget {
 
   void _mostrarAlerta(BuildContext context) {
     showDialog(
-      context: context,
-      barrierDismissible: true,
-      builder: (context){
-        return AlertDialog(
-          title: Text('Titulo'),
-          content: Text('Contenido'),          
-        );
-      }
-    );
+        context: context,
+        barrierDismissible: false,
+        builder: (context) {
+          return AlertDialog(
+            title: Text('Titulo'),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Text('Este es el contenido de la caja de la alerta'),
+                FlutterLogo(
+                  size: 50.0,
+                )
+              ],
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text("Cancelar"),
+                onPressed: () {},
+              ),
+              FlatButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text("Ok"),
+              )
+            ],
+          );
+        });
   }
 }

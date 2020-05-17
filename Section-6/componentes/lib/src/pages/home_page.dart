@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
 
     data.forEach((opts) {
       final widgetTemp = Card(
+        elevation: 3.0,
         child: ListTile(
           title: Text(opts['texto']),
           leading: getIcon(opts['icon']),

@@ -61,7 +61,7 @@ class HerMessageBubble extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   margin: const EdgeInsets.only(left: 8),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.secondary,
+                    color: Theme.of(context).colorScheme.secondaryFixedDim,
                     borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),
@@ -74,12 +74,12 @@ class HerMessageBubble extends StatelessWidget {
                     children: [
                       const Text(
                         'lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.black),
                       ),
                       const SizedBox(height: 5),
                       Text(
                         '12:00 PM',
-                        style: TextStyle(fontSize: 10, color: Colors.white70),
+                        style: TextStyle(fontSize: 10, color: Colors.black54),
                       ),
                     ],
                   ),

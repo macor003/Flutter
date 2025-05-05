@@ -53,7 +53,7 @@ class _ChatView extends StatelessWidget {
                       decoration: InputDecoration(
                         hintText: 'Escribe un mensaje',
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(40),
                           borderSide: const BorderSide(color: Colors.grey),
                         ),
                       ),
